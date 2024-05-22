@@ -88,6 +88,7 @@ var notFoundContainer = document.querySelector(".not-found-container");
 var listGroupContainerMajor = document.querySelector(".list-group-container-major");
 var listGroup = document.querySelector(".list-group");
 var listTitle = document.querySelector(".list-title span");
+var listSubtitle = document.querySelector(".list-subtitle span");
 var listGroupItem = document.querySelector(".list-group-item");
 
 
@@ -219,7 +220,8 @@ function processIngredient(e) {
 function searchForIngredient(ingredientePrincipal, tipoDePreparacion){
     notFoundContainer.style.display = 'none';
     listGroup.innerHTML = "";
-    listTitle.textContent = ingredientePrincipal;
+    listTitle.textContent = ingredientePrincipal.charAt(0).toUpperCase() + ingredientePrincipal.slice(1);
+    listSubtitle.textContent = tipoDePreparacion.charAt(0).toUpperCase() + tipoDePreparacion.slice(1);
     cocteles.forEach(coctel => {
         if(coctel.tipo == tipoDePreparacion && coctel.ingrediente == ingredientePrincipal){
             toList(coctel.nombre);  

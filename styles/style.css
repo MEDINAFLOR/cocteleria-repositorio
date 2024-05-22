@@ -1045,7 +1045,24 @@ img {
   font-family: var(--fuenteHeading);
   font-weight: 300;
   font-size: 2.3rem;
-  padding: .5rem;
+  line-height: 4rem;
+  padding: 1.5rem 1.5rem .5rem;
+}
+
+.list-subtitle {
+  font-family: var(--fuenteHeading);
+  font-style: italic;
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+
+
+}
+
+.list-subtitle > span{
+  font-weight: 600;
+  font-size: 2rem;
+  
 }
 
 .list-title > span {
