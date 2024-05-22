@@ -786,6 +786,44 @@ img {
   font-weight: 100;
 }
 
+.favorite{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-favorite{
+  position: absolute;
+  color: white;
+  opacity: 0;
+}
+
+.icon-favorite.like{
+  animation: like 1s ease-in-out;
+}
+
+@keyframes like{
+  0% {
+    opacity: 0;
+    font-size: 0;
+  }
+  15% {
+    opacity: 1;
+    font-size: 20rem;
+  }
+  30%{
+    font-size: 16rem;
+  }
+  45%,
+  80% {
+    font-size: 18rem;
+  }
+  100%{
+    font-size: 0;
+    opacity: 1;
+  }
+}
+
 .btn-enlace {
   display: flex;
   justify-content: center;
@@ -900,6 +938,10 @@ img {
   }
   .recipe-subtitle {
     padding: 1rem;
+  }
+
+  .recipe-img.favorite{
+    display: none;
   }
 
   .recipe-container {
