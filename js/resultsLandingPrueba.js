@@ -260,15 +260,3 @@ function addEvent(contenedor){
 
 
 
-
-
-
-// <script type="text/javascript">
-//   $(document).ready(function() {
-//     if (window.location.href.indexOf("tu-fragmento-url") > -1) {
-//       funcionEjecutada();
-//     }
-//   });
-// </script>
-
-
