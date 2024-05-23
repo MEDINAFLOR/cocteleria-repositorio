@@ -1,5 +1,5 @@
 const btnShowToggleFavotite = document.querySelector('#btn-show-toggle-favorite');
-const iconFavorite = document.querySelector(".icon-favorite")
+const iconFavorite = document.querySelector(".icon-favorite");
 let favorites = [];
 
 // Actualizar la favorite list
@@ -10,8 +10,7 @@ const updateFavoritesLocalStorage = () => {
 // Bajar los datos de localStorage a la lista para mostrar los cambios
 const loadFavoritesFromLocalStorage = () => {
     const storedFavorites = localStorage.getItem('Favorites');
-    favorites = JSON.parse(storedFavorites);
-    // showHTML();
+    favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
 };
 
 // Agregar o quitar de la favorite list
@@ -32,17 +31,16 @@ const toggleFavorite = cocktail => {
 
         setTimeout(()=>{
             iconFavorite.classList.remove('like')
-        }, 1000)
+        }, 1000);
     };
 };
 
 btnShowToggleFavotite.addEventListener('click',(event) =>{
-    const recipeContainer = event.target.closest(".recipe-container-major")
+    const recipeContainer = event.target.closest(".recipe-container-major");
     const cocktail = {
         img : recipeContainer.querySelector('#recipe-img').getAttribute('src'),
         name : recipeContainer.querySelector('#recipe-title').textContent,
-    }
-    toggleFavorite(cocktail)
-})
-
-loadFavoritesFromLocalStorage();
+    };
+    loadFavoritesFromLocalStorage();
+    toggleFavorite(cocktail);
+});
