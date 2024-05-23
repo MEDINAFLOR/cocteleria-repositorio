@@ -114,8 +114,8 @@ btnSearchIng.addEventListener("click", processIngredient);
 
 const loadFavoritesFromStorage = () => {
     const storageFavorites = localStorage.getItem('Favorites');
-    listForShowFavorites = JSON.parse(storageFavorites);
-}
+    listForShowFavorites = storageFavorites ? JSON.parse(storageFavorites) : [];
+};
 
 function BusquedaCoctel(idBusq, idNobusq, chkNoBusq) {
     var idBusqueda = document.getElementById(idBusq);
@@ -182,7 +182,7 @@ function embedElements(coctelName, coctelIngredients, coctelPreparation, coctelI
     listIngredientes(coctelIngredients);
     recipeContainerMajor.style.display = "block";
 
-    loadFavoritesFromStorage()
+    loadFavoritesFromStorage();
    
     const index = listForShowFavorites.findIndex(
         element =>  element.name === coctelName
@@ -192,8 +192,8 @@ function embedElements(coctelName, coctelIngredients, coctelPreparation, coctelI
         btnShowFavotite.textContent='Retirar de favoritos';
     }else{
         btnShowFavotite.textContent='Agregar a favoritos';
-    }
-}
+    };
+};
 
 
 function listIngredientes(coctelIngredientes) {
