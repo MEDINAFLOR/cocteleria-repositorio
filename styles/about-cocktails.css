@@ -158,13 +158,13 @@
   .utensils-container::-webkit-scrollbar {
     display: none;
   }
-  
+
+
   .utensils-container-title {
     font-family: var(--fuenteCursiva);
     font-weight: 400;
     text-align: center;
-    font-size: 4.8rem;
-    
+    font-size: 4.3rem;
   }
   
   .utensil-container {
@@ -204,13 +204,13 @@
   
   .btns-carousel-container button {
     border:none;
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: var(--maroon);
     background-color: var(--white);
     
   }
-  
-  
+
+
   @media (min-width: 1020px) {
       .utensils-container {
         display: flex;
@@ -230,4 +230,8 @@
       .utensil-img {
       padding-left: 3rem;
    }
+
+   .btns-carousel-container button {
+    font-size: 4rem;  
+  }
 }
