@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,8 @@
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/bievenidos.css">
-    <link rel="stylesheet" href="../styles/author-cocktails.css">
+    <link rel="stylesheet" href="../styles/favorites.css">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,21 +21,21 @@
         href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
-    <title>Coctelería de autor</title>
+    <title>de autor</title>
 
 </head>
 
 <body>
 
-    <header class="header">
-
+   <header class="header">
+    
         <div class="header-content container">
 
             <div class="logo text-center">
-                <div  class="logo-title no-margin">
+                <div class="logo-title no-margin">
                     <h1>Bartender <span> On trial</span> </h1>
                 </div>
-                
+
                 <div class="animacion-container">
                     <img class="animacion-img-coctelera animacion2-img-coctelera" src="../img/coctelera.png"
                         alt="coctelera">
@@ -46,22 +48,22 @@
                 <button class="btn-menu" id="btn-menu"><i class="fa-solid fa-bars"></i></button>
             </div>
 
-            <nav class="nav text-center">
-                <a class="nav-link" href="../logged/logged.html"><i class="fa-solid fa-martini-glass"></i></i>Cocteles</a>
-                <a class="nav-link" href="./author-cocktails.html"><i class="fa-solid fa-user-ninja"></i>Coctelería del Autor</a>
+            <nav class="nav nav-visible text-center" id="nav">
+                <a class="nav-link" href="../logged/logged.html"><i class="fa-solid fa-martini-glass"></i>Cocteles</a>
+                <a class="nav-link" href="./author-cocktails/author-cocktails.html"><i
+                        class="fa-solid fa-user-ninja"></i>Cocteleria del Autor</a>
                 <a class="nav-link" href="../favorites/favorites.html"><i class="fa-solid fa-heart"></i>Favoritos</a>
-                <a class="nav-link nav-close" href="/"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesion</a>
+                <a class="nav-link nav-close" id="loginbtn" onclick="CerrarSesion();"><i
+                        class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar
+                    sesion</a>
             </nav>
         </div>
 
     </header>
 
-
-    <section class="author-cocktails-container">
-        <p>about author cocktails</p>
-        <!-- Tomas Tumino -->
+    <section class="cocktails-container">
+        <div  id="body"><a> Acá aparecerán tus favoritos</a></div>
     </section>
-   
 
     <footer class="welcome-footer text-center">
         <div class="container">
@@ -76,7 +78,7 @@
             </p>
         </div>
     </footer>
-
+    <script src="../js/author-cocktails.js"></script>
 </body>
 
 </html>

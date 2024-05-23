@@ -54,7 +54,7 @@ let listForShowFavorites = [];
 
   // Menu desplegable
 
-  if(window.location.href.indexOf("logged.html") > -1){
+  if(window.location.href.indexOf("logged.html") > -1 || window.location.href.indexOf("favorites.html") > -1){
 
     var btnMenu = document.querySelector("#btn-menu");
     btnMenu.addEventListener("click", function showMenu() {
