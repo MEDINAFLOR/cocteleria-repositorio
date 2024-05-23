@@ -25,7 +25,7 @@ const showHTML = () =>{
     }else{
         favorites.forEach(cocktail =>{
             const cocktailBody =`
-                                <div class="cocktail-container" style="background-image: url(${cocktail.img});">
+                                <div class="cocktail-container" style="background-image: url(${cocktail.img});>
                                     <h2>${cocktail.name}</h2>        
                                 </div> 
             `;
