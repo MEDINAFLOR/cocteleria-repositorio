@@ -1,3 +1,13 @@
+
+class Login
+{
+    constructor(Nick,Correo)
+    {
+        this.nick=Nick;
+        this.correo=Correo;
+    }
+
+}
 var btnMenu = document.querySelector("#btn-menu");
 btnMenu.addEventListener("click", function showMenu() {
   nav.classList.toggle("activo");
@@ -36,3 +46,26 @@ const showHTML = () =>{
 
 loadFavoritesFromLocalStorage();
 
+function CerrarSesion()
+{
+  let DestroyUs = new Login("","");
+
+  localStorage.setItem("SesionUs",JSON.stringify(DestroyUs));
+
+  location.href = "/"
+}
+
+function CargarSesion()
+{
+if(document.location.href.indexOf("/favorites/favorites.html")> -1)
+   
+  {
+  let dtSesion = localStorage.getItem("SesionUs");
+  let indtSesion = JSON.parse(dtSesion);
+  if(indtSesion.nick=="")
+      {
+      location.href = "/landing.html"
+      }
+    }
+}
+CargarSesion();
