@@ -1,3 +1,9 @@
+var btnMenu = document.querySelector("#btn-menu");
+btnMenu.addEventListener("click", function showMenu() {
+  nav.classList.toggle("activo");
+})
+
+
 let favorites = [];
 
 const cocktailsContainer = document.querySelector('.cocktails-container');
