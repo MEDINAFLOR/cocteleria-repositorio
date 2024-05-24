@@ -1,4 +1,10 @@
 
+function importarScript(nombre) {
+    var s = document.createElement("script");
+    s.src = nombre;
+    document.querySelector("head").appendChild(s);
+}
+importarScript("/js/encoding.js");
 function validaFormulario ()
  {
     let formu = document.getElementById("registroForm");
@@ -48,7 +54,8 @@ function validaFormulario ()
 
     if(validation==true){
        // formu.submit();
-       tryReg(Nickname.value, User.value, Pass.value, email.value );
+       var PassEnc=SHA1(Pass.value);
+       tryReg(Nickname.value, User.value, PassEnc, email.value );
        alert("Datos guardados, utilice 'iniciar sesion' para testearlos!")
        location.href="/"
     } else{
@@ -108,7 +115,8 @@ function tryIs()
                valida=false;
                return; 
         }
-    let loginData=loadData(User.value,Pass.value);
+        var PassEnc=SHA1(Pass.value);
+    let loginData=loadData(User.value,PassEnc);
     if(loginData.nick=="" ||loginData.correo=="" )
         {
             alert("Usuario o contraseña incorrectos!");

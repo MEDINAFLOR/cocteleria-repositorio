@@ -1,0 +1,7 @@
+Bartender OnTrial.
+Creado por el grupo 17.
+
+Consideraciones:
+1) Para iniciar sesion primero debes registrarte.
+2) El registro se guarda en LocalStorage, por lo que solo funcionará para un usuario.
+3) El registro no es un metodo seguro, no uses usuarios que usas siempre, inventa uno y no lo olvides.
