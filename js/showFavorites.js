@@ -35,13 +35,13 @@ const showHTML = () =>{
         cocktailsSection.outerHTML= noFavorites; 
     }else{
         document.addEventListener("DOMContentLoaded", () =>{
-            const sectionTitle = document.querySelector(".cocktails-section h1")
+            const sectionTitle = document.querySelector(".cocktails-section h2")
             sectionTitle.classList.add('animated')
         });
         favorites.forEach(cocktail =>{
             const cocktailBody =`
                                 <div class="cocktail-container" style="background-image: url(${cocktail.img})">
-                                    <h2>${cocktail.name}</h2>        
+                                    <h3>${cocktail.name}</h3>        
                                 </div> 
             `;
             cocktailsContainer.insertAdjacentHTML('beforeend',cocktailBody);

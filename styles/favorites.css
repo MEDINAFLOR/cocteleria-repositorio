@@ -1,5 +1,5 @@
-.cocktails-section h1,
-.cocktail-container h2{
+.cocktails-section h2,
+.cocktail-container h3{
     display: inline-block;
     text-shadow: 2px 2px 2px black;
     font-family: var(--fuenteCursiva);
@@ -9,8 +9,8 @@
     position: relative;
 }
 
-.cocktails-section h1::before,
-.cocktails-section h1::after{
+.cocktails-section h2::before,
+.cocktails-section h2::after{
     content: "";
     position: absolute;
     top: 50%;
@@ -21,18 +21,18 @@
     transition: transform 1s ease;
 }
 
-.cocktails-section h1::before{
+.cocktails-section h2::before{
     left: -12rem;
     transform-origin: right;
 }
 
-.cocktails-section h1::after{
+.cocktails-section h2::after{
     right: -12rem;
     transform-origin: left;
 }
 
-.cocktails-section h1.animated::before,
-.cocktails-section h1.animated::after{
+.cocktails-section h2.animated::before,
+.cocktails-section h2.animated::after{
     transform: scale(1);
 }
 
