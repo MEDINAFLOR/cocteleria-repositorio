@@ -15,16 +15,19 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /* 1 rem = 10px */
+  font-size: 62.5%;
+  /* 1 rem = 10px */
   min-height: 100vh;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 .animacion-container {
   animation-timeline: scroll();
 }
@@ -96,21 +99,20 @@ img {
 .d-none {
   display: none;
 }
-#loginbtn
-{
+
+#loginbtn {
   cursor: pointer;
 }
+
 /* Header */
 
 .header {
-  background-image: linear-gradient(
-    to bottom,
-    #22092c,
-    #3a0e36,
-    #54133d,
-    #6e1941,
-    #872341
-  );
+  background-image: linear-gradient(to bottom,
+      #22092c,
+      #3a0e36,
+      #54133d,
+      #6e1941,
+      #872341);
   padding-bottom: 1.5rem;
 }
 
@@ -172,31 +174,39 @@ img {
 }
 
 @keyframes serve {
+
   0%,
   100% {
     bottom: 0;
   }
+
   30% {
     transform: translateY(2rem, -7rem);
   }
+
   40% {
     transform: translateY(-3rem) rotate(45deg);
   }
+
   45% {
     transform: translateY(-3rem) rotate(60deg);
   }
+
   50% {
     transform: translateY(-3rem) rotate(80deg);
   }
+
   60% {
     transform: translateY(-3rem) rotate(120deg);
   }
+
   70% {
     transform: translateY(-3rem) rotate(45deg);
   }
 }
 
 @keyframes fill {
+
   0%,
   100% {
     z-index: 1;
@@ -207,16 +217,19 @@ img {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
   }
 }
+
 @keyframes Entrada {
   0% {
     opacity: 0;
     visibility: visible;
   }
+
   100% {
     opacity: 1;
     visibility: visible;
@@ -231,6 +244,7 @@ img {
   font-weight: 400;
   padding: 1.5rem;
 }
+
 .nav-link-landing {
   display: flex;
   align-items: center;
@@ -275,6 +289,7 @@ img {
   .header {
     padding-bottom: 2rem;
   }
+
   .logo {
     flex-direction: row-reverse;
     align-items: baseline;
@@ -286,6 +301,7 @@ img {
     font-size: 6rem;
     font-weight: 400;
   }
+
   .logo-title span {
     display: inline;
     font-size: 3rem;
@@ -304,6 +320,7 @@ img {
   body {
     padding-top: 19rem;
   }
+
   .header {
     max-height: 25rem;
     padding-bottom: 3rem;
@@ -312,6 +329,7 @@ img {
     width: 100%;
     z-index: 2;
   }
+
   .header-content {
     display: flex;
     flex-direction: column;
@@ -370,6 +388,7 @@ img {
     justify-content: space-between;
     align-items: baseline;
   }
+
   .logo {
     padding-top: 0rem;
     padding-bottom: 0rem;
@@ -473,7 +492,7 @@ img {
   display: none;
   width: 100%;
   margin: .5rem auto;
-  background-color: rgba(0, 0, 0, 0.4); 
+  background-color: rgba(0, 0, 0, 0.4);
   font-size: 1.4rem;
   line-height: 1.4rem;
   padding: 2rem;
@@ -488,9 +507,9 @@ img {
   margin: 0;
 }
 
-.validation-feedback i{
+.validation-feedback i {
   color: var(--orange);
-  font-size:1.8rem;
+  font-size: 1.8rem;
 }
 
 .btn-search {
@@ -511,6 +530,7 @@ img {
   position: relative;
   display: none;
 }
+
 .form {
   background-color: rgba(61, 52, 52, 0.7);
   width: 100%;
@@ -665,11 +685,11 @@ img {
   cursor: pointer;
 }
 
-@media (min-width: 1020px) { 
-    .selector-major-container {
-      margin-top: 5rem;
-    }
- }
+@media (min-width: 1020px) {
+  .selector-major-container {
+    margin-top: 5rem;
+  }
+}
 
 /* Banner + Tipo de buscador + buscadores Media Queries pantallas desde 1200px */
 
@@ -704,6 +724,7 @@ img {
     max-width: 47%;
     float: left;
   }
+
   #Resultados {
     background-color: #eff2f779;
     float: right;
@@ -712,6 +733,7 @@ img {
     height: 500px;
     visibility: hidden;
   }
+
   #Seleccion1 {
     float: right;
     position: absolute;
@@ -720,6 +742,7 @@ img {
     z-index: 5;
     visibility: hidden;
   }
+
   #Seleccion2 {
     float: right;
     position: relative;
@@ -780,6 +803,12 @@ img {
   margin: 3rem auto;
 }
 
+.author-container-major {
+  display: block;
+  width: 90%;
+  margin: 3rem auto;
+}
+
 .recipe-title {
   font-family: var(--fuenteCursiva);
   font-size: 3.8rem;
@@ -793,21 +822,19 @@ img {
   text-align: center;
   width: 100%;
   height: 4.8rem;
-  background-image: linear-gradient(
-    to right top,
-    #770850,
-    #760c4d,
-    #74104a,
-    #731347,
-    #711644,
-    #721843,
-    #731942,
-    #741b41,
-    #791d41,
-    #7e1f41,
-    #822141,
-    #872341
-  );
+  background-image: linear-gradient(to right top,
+      #770850,
+      #760c4d,
+      #74104a,
+      #731347,
+      #711644,
+      #721843,
+      #731942,
+      #741b41,
+      #791d41,
+      #7e1f41,
+      #822141,
+      #872341);
   color: var(--white);
   font-size: 1.7rem;
   font-weight: 400;
@@ -824,7 +851,7 @@ img {
   height: 100%;
 }
 
-.btn-enlace a > i {
+.btn-enlace a>i {
   font-size: 2rem;
   padding-right: 1rem;
 }
@@ -899,11 +926,12 @@ img {
     padding: 5rem;
     max-width: 100rem;
   }
+
   .recipe-subtitle {
     padding: 1rem;
   }
 
-  .recipe-img.favorite{
+  .recipe-img.favorite {
     display: none;
   }
 
@@ -916,6 +944,7 @@ img {
   .recipe-img {
     display: none;
   }
+
   .recipe-img2 {
     display: none;
   }
@@ -929,10 +958,10 @@ img {
 
   .recipe-preparation {
     display: block;
-    background-image:'';
+    background-image: '';
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
     grid-row: 1/6;
     grid-column: 2/6;
     color: transparent;
@@ -942,7 +971,7 @@ img {
   #backdrop {
     background-color: transparent;
   }
-  
+
   .recipe-preparation2 {
     display: block;
     background-image: url("/img/daikiri.png");
@@ -954,6 +983,7 @@ img {
     color: transparent;
     background-color: rgb(255, 169, 169);
   }
+
   .backdrop-filter-on,
   .backdrop-filter-off {
     display: flex;
@@ -980,13 +1010,16 @@ img {
   .btn-show:active {
     background-color: #872341;
   }
+
   .btn-show2:active {
     background-color: #872341;
   }
+
   .btn-show-toggle {
     display: block;
     width: 100%;
   }
+
   .btn-show-toggle2 {
     display: block;
     width: 100%;
@@ -1022,13 +1055,13 @@ img {
 
 }
 
-.list-subtitle > span{
+.list-subtitle>span {
   font-weight: 600;
   font-size: 2rem;
-  
+
 }
 
-.list-title > span {
+.list-title>span {
   font-family: var(--fuenteCursiva);
   font-size: 3.8rem;
   font-weight: 400;
@@ -1088,14 +1121,12 @@ img {
 /* footer */
 
 .welcome-footer {
-  background-image: linear-gradient(
-    to bottom,
-    #22092c,
-    #3a0e36,
-    #54133d,
-    #6e1941,
-    #872341
-  );
+  background-image: linear-gradient(to bottom,
+      #22092c,
+      #3a0e36,
+      #54133d,
+      #6e1941,
+      #872341);
   color: var(--white);
   font-size: 1.5rem;
   padding: 4rem 1rem 1rem;
@@ -1123,6 +1154,7 @@ img {
   .welcome-footer p {
     padding-top: 0;
   }
+
   .welcome-social-media {
     display: flex;
     justify-content: center;
@@ -1139,6 +1171,7 @@ img {
   position: fixed;
   z-index: 20;
 }
+
 #Mensaje {
   position: absolute;
   width: 40%;
@@ -1160,12 +1193,15 @@ img {
   vertical-align: middle;
   padding: 20px;
 }
+
 .logAction {
   margin-top: 20%;
 }
+
 .logAction input {
   margin-top: 15px;
 }
+
 #Mensaje img {
   width: 25px;
   float: right;
@@ -1179,30 +1215,37 @@ img {
   margin-top: 5%;
   width: 80%;
 }
+
 .btnlogin {
   margin-top: 5%;
 }
+
 .Busqueda {
   float: right;
   margin-right: 3%;
   margin-bottom: 2%;
   width: 20%;
 }
+
 .Busqueda input {
   border-radius: 5px;
   height: 35px;
   width: 75%;
 }
+
 #imgBusqueda {
   max-width: 60px;
   float: right;
 }
+
 .m-wid50 {
   max-width: 50%;
 }
+
 .cursor_p {
   cursor: pointer;
 }
+
 /* Menu desplegable */
 
 @media (max-width: 768px) {
@@ -1211,12 +1254,13 @@ img {
     overflow: hidden;
     transition: all 0.5s ease;
   }
-  #Mensaje{
-  width: 90%;
-  min-height: 60%;
-  margin-top: 1%;
-  margin-left: 5%;
-}
+
+  #Mensaje {
+    width: 90%;
+    min-height: 60%;
+    margin-top: 1%;
+    margin-left: 5%;
+  }
 
   .nav.activo {
     height: max-content;
@@ -1230,6 +1274,7 @@ img {
     color: white;
   }
 }
+
 /* Cookies */
 
 .cookies-major-container {
@@ -1258,9 +1303,11 @@ img {
   text-align: center;
   padding-bottom: 2rem;
 }
+
 .cookie-title h3 {
   display: inline;
 }
+
 .cookie-title i {
   font-size: 4rem;
 }
@@ -1273,6 +1320,7 @@ img {
   width: 1.5rem;
   height: 1.5rem;
 }
+
 .enlace-politicas {
   color: var(--orange);
   font-size: 1.9rem;
@@ -1306,6 +1354,7 @@ img {
     width: 100%;
     text-align: center;
   }
+
   .btn-cookie input {
     width: 30%;
   }
@@ -1343,9 +1392,11 @@ img {
 
   /* visibility: hidden;*/
 }
+
 #Buscadores_Padre {
   max-width: 100%;
 }
+
 .Resultados {
   max-height: 100%;
   height: 100%;
@@ -1354,13 +1405,22 @@ img {
 
 /* seccion author */
 .author-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-grid;
+  grid-template-columns: auto;
   margin: 0 auto;
-  background-color: var(--white);
-  padding: 5rem 0rem;
+  background-color: var(--grey);
+  padding: 3rem 0rem;
   width: 100%;
 }
 
+@media screen and (min-width: 1400px) {
+  .author-container {
+    grid-template-columns: auto auto;
+  }
+}
 
+@media screen and (min-width: 2600px) {
+  .author-container {
+    grid-template-columns: auto auto auto auto;
+  }
+}
