@@ -1,3 +1,54 @@
+.nav .fa-heart{
+  position: relative;
+}
+
+.nav .fa-heart.nav-like{
+  animation: nav-like 0.3s linear;
+}
+
+@keyframes nav-like{
+  0%,100%{top:0;}
+  30%{top: -0.5rem;}
+}
+
+.favorite{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-favorite{
+  position: absolute;
+  color: white;
+  opacity: 0;
+}
+
+.icon-favorite.like{
+  animation: like 1s ease-in-out;
+}
+
+@keyframes like{
+  0% {
+    opacity: 0;
+    font-size: 0;
+  }
+  15% {
+    opacity: 1;
+    font-size: 18rem;
+  }
+  30%{
+    font-size: 14rem;
+  }
+  45%,
+  80% {
+    font-size: 16rem;
+  }
+  100%{
+    font-size: 0;
+    opacity: 1;
+  }
+}
+
 .cocktails-container {
     display: flex;
     gap: 1rem;
@@ -34,43 +85,14 @@
     position: absolute;
     top: 0;
   }
-
-  .cocktail-favorite{
-    display: flex;
-    justify-content: space-between;
-  }
   
-  .cocktail-favorite h2 {
+  .cocktail-body h2 {
     text-shadow: 2px 2px 2px black;
     font-family: var(--fuenteCursiva);
     font-size: 4rem;
     font-weight: 400;
     margin-top: 0;
     padding-left: 2rem;
-  }
-  
-  .cocktail-favorite button{
-    margin-right: 2rem;
-    padding: 0;
-    font-size: 3rem;
-    background: transparent;
-    border:none;
-    cursor: pointer;
-    align-self: center;
-    color: var(--red);
-  }
-
-  #added-favorite {
-    display: none;
-  }
-  
-  #no-favorite.active {
-    display: none;
-  }
-  
-  #added-favorite.active {
-    display: block;
-    color: var(--red);
   }
 
   .cocktail-body p {

@@ -1,5 +1,6 @@
 const btnShowToggleFavotite = document.querySelector('#btn-show-toggle-favorite');
 const iconFavorite = document.querySelector(".icon-favorite");
+const navFavoriteIcon = document.querySelector(".nav .fa-heart")
 let favorites = [];
 
 // Actualizar la favorite list
@@ -27,8 +28,13 @@ const toggleFavorite = cocktail => {
         favorites.push(cocktail);
         updateFavoritesLocalStorage();
         btnShowToggleFavotite.textContent='Retirar de favoritos';
-        iconFavorite.classList.add('like')
 
+        navFavoriteIcon.classList.add('nav-like')
+        setTimeout(()=>{
+            navFavoriteIcon.classList.remove('nav-like')
+        }, 1000);
+
+        iconFavorite.classList.add('like')
         setTimeout(()=>{
             iconFavorite.classList.remove('like')
         }, 1000);

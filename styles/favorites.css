@@ -14,7 +14,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    width: 13rem;
+    width: 11rem;
     height: 0.3rem;
     background-color: black;
     transform: scale(0);
@@ -22,12 +22,12 @@
 }
 
 .cocktails-section h1::before{
-    left: -14rem;
+    left: -12rem;
     transform-origin: right;
 }
 
 .cocktails-section h1::after{
-    right: -14rem;
+    right: -12rem;
     transform-origin: left;
 }
 
