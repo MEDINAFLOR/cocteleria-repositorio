@@ -7,7 +7,7 @@
             nombre: "Bombay",
             ingrediente: "brandy",
             tipo: "directo",
-            ingredientes: ["1/4 de vermut blanco seco", "1/4 de vermut rojo", "1/4 de vermut rojo", "2 golpes de Curaçao (naranja a ser posible)"],
+            ingredientes: ["1/4 de vermut blanco seco", "1/4 de vermut rojo", "2 golpes de Curaçao (naranja a ser posible)"],
             preparacion: "Se echan en vaso mezclador con unos cubitos de hielo. Remover y servir en vaso bajo y ancho(old fashioned), agregando uno odos cubitos de hielo",
             imagen:"../img/bombay.jpg"
         },
@@ -17,7 +17,7 @@
             ingrediente: "brandy",
             tipo: "coctelera",
             ingredientes: ["1/3 de brandy", "1/4 de vermut rojo", "1/3 de crema de cacao", "1/3 de nata liquida o crema de leche"],
-            preparacion: "Agite bien todos los ingredientes en una coctelera con hielo picado.Sírvalo sin colar en copa de cóctel.Si se desea añada un poco de nuez moscada.",
+            preparacion: "Agite bien todos los ingredientes en una coctelera con hielo picado. Sírvalo sin colar en copa de cóctel.Si se desea añada un poco de nuez moscada.",
             imagen:"../img/brandyalexander.webp"
         },
     
@@ -26,7 +26,7 @@
             ingrediente: "brandy",
             tipo: "directo",
             ingredientes: ["1/2 de brandy", "1/2 de Amaretto"],
-            preparacion: "Vierta todos los ingredientes directamente en un vaso bajo y ancho (old fashioned) con cubitos de hielo. Revuelva suavemente..",
+            preparacion: "Vierta todos los ingredientes directamente en un vaso bajo y ancho (old fashioned) con cubitos de hielo. Revuelva suavemente.",
             imagen:"../img/frenchconnection.webp"
         },
     
@@ -35,7 +35,7 @@
             ingrediente: "brandy",
             tipo: "coctelera",
             ingredientes: ["2/3 de brandy", "1/3 de crema de menta"],
-            preparacion: "Mezclar en la coctelera con un poco de hielo picado.Agitar y servir en copa de cóctel previamente enfriada.",
+            preparacion: "Mezclar en la coctelera con un poco de hielo picado. Agitar y servir en copa de cóctel previamente enfriada.",
             imagen:"../img/stinger.webp"
         },
     
@@ -58,7 +58,8 @@ let listForShowFavorites = [];
 
     var btnMenu = document.querySelector("#btn-menu");
     btnMenu.addEventListener("click", function showMenu() {
-      nav.classList.toggle("activo");
+        var nav = document.querySelector('#nav')
+        nav.classList.toggle("activo");
     })
 }
 
@@ -69,7 +70,7 @@ var btnSearchName = document.querySelector("#btn-search-name");
 var btnNewSearch = document.querySelector("#new-search");
 var btnSearchIng = document.querySelector("#btn-search-ing");
 
-const btnShowFavotite = document.querySelector('#btn-show-toggle-favorite')
+const btnShowFavorite = document.querySelector('#btn-show-toggle-favorite')
 
 // Contenedores
 var searchForNameForm = document.querySelector("#search-for-name");
@@ -189,9 +190,9 @@ function embedElements(coctelName, coctelIngredients, coctelPreparation, coctelI
     );
 
     if (index != -1){
-        btnShowFavotite.textContent='Retirar de favoritos';
+        btnShowFavorite.textContent='Retirar de favoritos';
     }else{
-        btnShowFavotite.textContent='Agregar a favoritos';
+        btnShowFavorite.textContent='Agregar a favoritos';
     };
 };
 
