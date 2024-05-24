@@ -92,6 +92,15 @@ img {
   margin: 0;
 }
 
+.margin {
+  margin: 2rem;
+}
+
+.margin-top{
+  margin-top: 10rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .no-padding {
   padding: 0;
 }
@@ -857,16 +866,12 @@ img {
 }
 
 .recipe-preparation {
-  display: none;
+  display: none; 
   background-image: url("");
 }
 
-#backdrop {
-  background-color: var(--white);
-  padding: 2rem;
-}
 
-.backdrop {
+#backdrop {
   background-color: var(--white);
   padding: 2rem;
 }
@@ -891,6 +896,10 @@ img {
   font-weight: 600;
   height: 4.8rem;
   margin-top: 1rem;
+}
+
+.btn-show3{
+  height: fit-content;
 }
 
 /* Section recipe - Media Queries pantallas desde 768px */
@@ -971,6 +980,7 @@ img {
   }
 
   .backdrop {
+    padding: 2rem;
     background-color: transparent;
   }
 
@@ -1419,6 +1429,10 @@ img {
   display: block;
   width: 90%;
   margin: 3rem auto;
+}
+
+.justify{
+  text-align: justify;
 }
 
 
