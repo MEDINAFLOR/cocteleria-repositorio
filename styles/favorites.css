@@ -1,3 +1,41 @@
+.cocktails-section h1,
+.cocktail-container h2{
+    display: inline-block;
+    text-shadow: 2px 2px 2px black;
+    font-family: var(--fuenteCursiva);
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+}
+
+.cocktails-section h1::before,
+.cocktails-section h1::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 13rem;
+    height: 0.3rem;
+    background-color: black;
+    transform: scale(0);
+    transition: transform 1s ease;
+}
+
+.cocktails-section h1::before{
+    left: -14rem;
+    transform-origin: right;
+}
+
+.cocktails-section h1::after{
+    right: -14rem;
+    transform-origin: left;
+}
+
+.cocktails-section h1.animated::before,
+.cocktails-section h1.animated::after{
+    transform: scale(1);
+}
+
 .cocktails-container{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
@@ -17,15 +55,6 @@
 
 .cocktail-container:hover {
     transform: scale(1.02);
-}
-
-.cocktail-container h2{
-    text-align: center;
-    text-shadow: 2px 2px 2px black;
-    font-family: var(--fuenteCursiva);
-    font-size: 4rem;
-    font-weight: 400;
-    margin-top: 0;
 }
 
 .no-favorite{

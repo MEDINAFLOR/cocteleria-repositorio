@@ -17,10 +17,11 @@ btnMenu.addEventListener("click", function showMenu() {
 let favorites = [];
 
 const cocktailsContainer = document.querySelector('.cocktails-container');
+const cocktailsSection = document.querySelector('.cocktails-section');
 
 const loadFavoritesFromLocalStorage = () => {
     const storedFavorites = localStorage.getItem('Favorites');
-    favorites = JSON.parse(storedFavorites);
+    favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
     showHTML();
 };
 
@@ -31,8 +32,12 @@ const showHTML = () =>{
                                 <h2>Sin favoritos</h2>        
                             </div>                             
         `;
-        cocktailsContainer.outerHTML= noFavorites; 
+        cocktailsSection.outerHTML= noFavorites; 
     }else{
+        document.addEventListener("DOMContentLoaded", () =>{
+            const sectionTitle = document.querySelector(".cocktails-section h1")
+            sectionTitle.classList.add('animated')
+        });
         favorites.forEach(cocktail =>{
             const cocktailBody =`
                                 <div class="cocktail-container" style="background-image: url(${cocktail.img})">
