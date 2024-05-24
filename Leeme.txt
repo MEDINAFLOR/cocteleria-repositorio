@@ -4,4 +4,6 @@ Creado por el grupo 17.
 Consideraciones:
 1) Para iniciar sesion primero debes registrarte.
 2) El registro se guarda en LocalStorage, por lo que solo funcionará para un usuario.
-3) El registro no es un metodo seguro, no uses usuarios que usas siempre, inventa uno y no lo olvides.
+3) El registro codifica la contraseña en SHA1 para que si alguien lee el LocalStorage no pueda leerla
+4) Al hacer el login el js codifica la contraseña del campo pass y compara los encriptados, no decodifica la guardada
+5) Estos metodos serán modificados en el backend.
