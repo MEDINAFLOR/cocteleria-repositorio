@@ -26,7 +26,7 @@
 
 <body>
 
-  
+
     <header class="header">
         <div id="PopUp">
             <div id="Mensaje">Cargando </div>
@@ -47,17 +47,18 @@
             </div>
 
             <div class="text-center">
-                <button class="btn-menu" id="btn-menu"><i class="fa-solid fa-bars" style="color: transparent;"></i></button>
+                <button class="btn-menu" id="btn-menu"><i class="fa-solid fa-bars"
+                        style="color: transparent;"></i></button>
             </div>
 
             <nav class="nav-landing text-center" id="nav">
                 <div class="nav-link-landing">
-                    <i class="fa-solid fa-house"></i> 
-                    <a  href="./index.html">Inicio</a>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="./index.html">Inicio</a>
                 </div>
                 <div class="nav-link-landing">
-                    <i class="fa-regular fa-user"></i> 
-                    <a  id="loginbtn" onclick="showPopPup('/logActions.html');">Iniciar sesion o Registrarse</a>
+                    <i class="fa-regular fa-user"></i>
+                    <a id="loginbtn" onclick="showPopPup('/logActions.html');">Iniciar sesion o Registrarse</a>
                 </div>
             </nav>
         </div>
@@ -76,12 +77,12 @@
 
             <div class="cookie">
                 <input type="checkbox" name="mejor" id="mejor" value="">Acepto el uso de mis datos con el fin de
-                    mejorar la experiencia de navegación.
+                mejorar la experiencia de navegación.
             </div>
 
             <div class="cookie">
                 <input type="checkbox" name="marke" id="marke" value="">Acepto el uso de mis datos con fines de
-                    análisis de datos y marketing. (Tus datos nunca se compartirán con terceros)
+                análisis de datos y marketing. (Tus datos nunca se compartirán con terceros)
             </div>
             <div class="cookie">
                 <input type="checkbox" name="Acept" id="AceptCookie" value=""> He leído la<a
@@ -92,161 +93,168 @@
             </div>
         </div>
     </div> <!-- div para agregar politicas de cookies-->
-<!-- BUSCADORES -->
+    <!-- BUSCADORES -->
 
-<div class="banner text-center" id="Buscadores_padre">
+    <div class="banner text-center" id="Buscadores_padre">
 
-    <div class="form-lg-center">
-        <div class="selector-major-container">
-            <p>Buscar Coctel</p>
-            <div class="selector-container">
-                <div class="selector-group">
-                    <input type="radio" value="" id="chk-op1" name="chk-op1"
-                        onclick="BusquedaCoctel('search-for-name', 'search-ingred', 'chk-op2')" checked>
-                    <label for="chk-op1">Nombre del cóctel </label>
-                </div>
+        <div class="form-lg-center">
+            <div class="selector-major-container">
+                <p>Buscar Coctel</p>
+                <div class="selector-container">
+                    <div class="selector-group">
+                        <input type="radio" value="" id="chk-op1" name="chk-op1"
+                            onclick="BusquedaCoctel('search-for-name', 'search-ingred', 'chk-op2')" checked>
+                        <label for="chk-op1">Nombre del cóctel </label>
+                    </div>
 
-                <div class="selector-group">
-                    <input type="radio" value="" id="chk-op2" name="chk-op2"
-                        onclick="BusquedaCoctel('search-ingred', 'search-for-name','chk-op1')">
-                    <label for="chk-op2">Ingrediente Principal</label>
+                    <div class="selector-group">
+                        <input type="radio" value="" id="chk-op2" name="chk-op2"
+                            onclick="BusquedaCoctel('search-ingred', 'search-for-name','chk-op1')">
+                        <label for="chk-op2">Ingrediente Principal</label>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="Buscadores">
+            <div class="Buscadores">
 
-            <form class="search-for-name" id="search-for-name">
-                <div class="search-for-name-group">
-                    <label for="coctel-name">
-                        Escribe el nombre del Coctel
-                    </label>
-                    <input id="coctel-name" type="text" placeholder="  Ejemplo: daikiri" name="CoctelNombre"
-                        required>
-                </div>
-
-                <div class="validation-feedback">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <p>Por favor escriba el nombre del Coctel</p>
-                </div>
-
-                <button type="submit" class="btn-search" id="btn-search-name"
-                    onclick="window.location.href ='#results' "><i class="fa-solid fa-magnifying-glass"></i>
-                    Buscar</button>
-            </form>
-
-
-            <form class="form text-center" id="search-ingred">
-
-                <div>
-                    <div class="form-group">
-                        <input type="hidden">
-                        <label class="form-label" for="main-ingredient">Ingrediente Principal</label>
-                        <select class=" form-select text-center" id="main-ingredient">
-                            <option value="brandy">Brandy</option>
-                            <option value="ginebra">Ginebra</option>
-                            <option value="whisky">Whisky</option>
-                            <option value="cava">Cava</option>
-                            <option value="ron">Ron</option>
-                            <option value="tequila">Tequila</option>
-                        </select>
+                <form class="search-for-name" id="search-for-name">
+                    <div class="search-for-name-group">
+                        <label for="coctel-name">
+                            Escribe el nombre del Coctel
+                        </label>
+                        <input id="coctel-name" type="text" placeholder="  Ejemplo: daikiri" name="CoctelNombre"
+                            required>
                     </div>
 
-                    <div class="form-group">
-                        <label class="form-label" for="types-of-preparation">Tipo de Preparación</label>
-                        <select class="form-select text-center" id="types-of-preparation">
-                            <option value="directo">Directos</option>
-                            <option value="vasomezclador">En vaso mezclador</option>
-                            <option value="coctelera">En coctelera</option>
-                            <option value="licuadora">En licuadora</option>
-                            <option value="flambeado">Flambeados</option>
-                        </select>
+                    <div class="validation-feedback">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <p>Por favor escriba el nombre del Coctel</p>
                     </div>
 
-                    <div class="form-group form-group-check">
-                        <input type="checkbox" id="checkbox" class="form-input " name="Autor" disabled>
-                        <label for="checkbox" class="form-label-check">De Autor</label><br>
-                    </div>
-
-                    <div class="mje-informativo d-none">
-                        <p> Para buscar cocteleria de autor debes estar Registrado/a. </p>
-                        <a onclick="showPopPup('/registro/index.html')"> Registrese Aquí</a>
-                    </div>
-
-                    <button onclick="window.location.href ='#results'" type="submit" class="btn-search"
-                        id="btn-search-ing" Value="Buscar"><i class="fa-solid fa-magnifying-glass"></i>
+                    <button type="submit" class="btn-search" id="btn-search-name"
+                        onclick="window.location.href ='#results' "><i class="fa-solid fa-magnifying-glass"></i>
                         Buscar</button>
+                </form>
 
-                </div>
-            </form>
-        </div>
-    </div>
 
- <iframe width="400" height="450" src="https://www.youtube.com/embed/JMwnqOosPOs?playlist=JMwnqOosPOs&autoplay=1&loop=1&mute=1&controls=0" title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
- 
-</div>
+                <form class="form text-center" id="search-ingred">
 
-<!-- FIN BUSCADORES -->
-<!-- RESULTADOS -->
-<div id="results">
+                    <div>
+                        <div class="form-group">
+                            <input type="hidden">
+                            <label class="form-label" for="main-ingredient">Ingrediente Principal</label>
+                            <select class=" form-select text-center" id="main-ingredient">
+                                <option value="brandy">Brandy</option>
+                                <option value="ginebra">Ginebra</option>
+                                <option value="whisky">Whisky</option>
+                                <option value="cava">Cava</option>
+                                <option value="ron">Ron</option>
+                                <option value="tequila">Tequila</option>
+                            </select>
+                        </div>
 
-    <div class="not-found-container text-center" id="not-found-container">
-        <div>
-            <i class="fa-regular fa-face-frown"></i>
-            <p>Lo sentimos, no se encontraron resultados para esa búsqueda</p>
-            <div class=" btn-enlace" id="new-search">
-                <a href="#Buscadores_padre">Buscar otro</a>
+                        <div class="form-group">
+                            <label class="form-label" for="types-of-preparation">Tipo de Preparación</label>
+                            <select class="form-select text-center" id="types-of-preparation">
+                                <option value="directo">Directos</option>
+                                <option value="vasomezclador">En vaso mezclador</option>
+                                <option value="coctelera">En coctelera</option>
+                                <option value="licuadora">En licuadora</option>
+                                <option value="flambeado">Flambeados</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group-check">
+                            <input type="checkbox" id="checkbox" class="form-input " name="Autor" disabled>
+                            <label for="checkbox" class="form-label-check">De Autor</label><br>
+                        </div>
+
+                        <div class="mje-informativo d-none">
+                            <p> Para buscar cocteleria de autor debes estar Registrado/a. </p>
+                            <a onclick="showPopPup('/registro/index.html')"> Registrese Aquí</a>
+                        </div>
+
+                        <button onclick="window.location.href ='#results'" type="submit" class="btn-search"
+                            id="btn-search-ing" Value="Buscar"><i class="fa-solid fa-magnifying-glass"></i>
+                            Buscar</button>
+
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <section class="list-group-container-major text-center">
+    <!-- FIN BUSCADORES -->
+    <!-- RESULTADOS -->
+    <div id="results">
 
-        <h3 class="list-title">Listado de tragos con <span></span></h3>
-        <p class="list-subtitle">Preparación: <span></span></p>
-        <div class="list-group-container">
-            <ul class="list-group"></ul>
-        </div>
-
-    </section>
-
-    <section class="recipe-container-major" id="recipe-container-major">
-        <h2 class=" recipe-title text-center no-margin" id="recipe-title">Title</h2>
-        <div class="recipe-container">
-            <div class="recipe-img">
-                <img src="../img/bombay.jpg" alt="coctel-img" id="recipe-img">
-            </div>
-
-            <div class=" recipe-ingredients">
-                <h3 class="recipe-subtitle no-margin"><i class="fa-solid fa-wine-bottle"></i> Ingredientes</h3>
-                <ul id="list-recipe-ingredients"></ul>
-            </div>
-
-            <div class="recipe-buttom text-center">
-                <button class="btn-show" id="btn-show">Ver Preparación</button>
-                <button class="btn-show-toggle d-none" id="btn-show-toggle">Ver preparacion</button>
-            </div>
-
-            <div class="recipe-preparation text-center">
-                <div id="backdrop">
-                    <h3 class="recipe-subtitle no-margin"><i class="fa-solid fa-martini-glass-citrus"></i>
-                        Preparación
-                    </h3>
-                    <p class="no-margin" id="recipe-prep"></p>
+        <div class="not-found-container text-center" id="not-found-container">
+            <div>
+                <i class="fa-regular fa-face-frown"></i>
+                <p>Lo sentimos, no se encontraron resultados para esa búsqueda</p>
+                <div class=" btn-enlace" id="new-search">
+                    <a href="#Buscadores_padre">Buscar otro</a>
                 </div>
             </div>
-            <div class=" btn-enlace text-center">
-                <a href="#Buscadores_padre"><i class="fa-solid fa-arrow-up"></i> Volver</a>
-            </div>
         </div>
-    </section>
+
+        <section class="list-group-container-major text-center">
+
+            <h3 class="list-title">Listado de tragos con <span></span></h3>
+            <p class="list-subtitle">Preparación: <span></span></p>
+            <div class="list-group-container">
+                <ul class="list-group"></ul>
+            </div>
+
+        </section>
+
+        <section class="recipe-container-major" id="recipe-container-major">
+            <h2 class=" recipe-title text-center no-margin" id="recipe-title">Title</h2>
+            <div class="recipe-container">
+                <div class="recipe-img">
+                    <img src="../img/bombay.jpg" alt="coctel-img" id="recipe-img">
+                </div>
+
+                <div class=" recipe-ingredients">
+                    <h3 class="recipe-subtitle no-margin"><i class="fa-solid fa-wine-bottle"></i> Ingredientes</h3>
+                    <ul id="list-recipe-ingredients"></ul>
+                </div>
+
+                <div class="recipe-buttom text-center">
+                    <button class="btn-show" id="btn-show">Ver Preparación</button>
+                    <button class="btn-show-toggle d-none" id="btn-show-toggle">Ver preparacion</button>
+                </div>
+
+                <div class="recipe-preparation text-center">
+                    <div id="backdrop">
+                        <h3 class="recipe-subtitle no-margin"><i class="fa-solid fa-martini-glass-citrus"></i>
+                            Preparación
+                        </h3>
+                        <p class="no-margin" id="recipe-prep"></p>
+                    </div>
+                </div>
+                <div class=" btn-enlace text-center">
+                    <a href="#Buscadores_padre"><i class="fa-solid fa-arrow-up"></i> Volver</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <div class="container-iframe">
+        <div class="container-body">
+            <div class="iframe-text">
+                <h2>Flair Bartending</h2>
+                <p>El <span>Flair bartending</span> es una habilidad que tienen los bartenders para servir cocteles de una manera divertida, vistosa y entretenida; se adquiere con mucha práctica y no todas las personas tienen la motricidad o son especialistas en flair bartending. Sin embargo, te compartimos algunas ideas en manos de Mentor Joglan Barrios.</p>
+            </div>
+            <iframe src="https://www.youtube.com/embed/kn6jNI2JTLI?si=upqhguim3mvXOadB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
 
 
 
-
-</div>
-
-<!-- FIN RESULTADOS -->
+    <!-- FIN RESULTADOS -->
 
     <footer class="welcome-footer text-center">
         <div class="container">
@@ -262,11 +270,11 @@
         </div>
     </footer>
     <script src="./js/resultsLandingPrueba.js"></script>
-  
+
     <!-- <script src="../js/loadFavorites.js"></script> -->
     <script src="./js/landing.js"></script>
     <script src="./Cookies/Cookies.js"></script>
-    
+
     <script src="./js/main.js"></script>
     <script src="./js/registro.js"></script>
     <!-- <script src="./js/landing.js"></script>

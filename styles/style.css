@@ -1447,3 +1447,61 @@ img {
     grid-template-columns: auto auto auto auto;
   }
 }
+
+/* iframe  */
+
+.container-iframe {
+  background-color: black;
+}
+
+.container-body {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 2.5rem 0rem;
+  text-align: center;
+}
+
+.iframe-text {
+  text-align: justify;
+  font-family: var(--fuenteParrafos);
+  padding: 3rem;
+  color: white;
+}
+
+.iframe-text h2 {
+  font-family: var(--fuenteHeading);
+  font-weight: 400;
+}
+
+.iframe-text span {
+  color: var(--orange);
+  font-style: italic;
+}
+
+.container-iframe iframe {
+  border: #6e1941;
+}
+
+iframe {
+  width: 80%;
+  max-width: 80rem;
+  padding: 0rem;
+}
+
+@media (min-width: 768px) { 
+    .container-iframe {
+      flex-direction: column;
+      height: 80rem;
+    }
+
+    .iframe-text h2 {
+      text-align: center;
+    }
+
+    iframe {
+      height: 45rem;
+      padding: 3rem;
+    }
+    
+ }
