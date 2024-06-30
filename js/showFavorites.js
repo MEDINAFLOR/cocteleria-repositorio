@@ -8,6 +8,13 @@ class Login
     }
 
 }
+function importarScript(nombre) {
+    var s = document.createElement("script");
+    s.src = nombre;
+    document.querySelector("head").appendChild(s);
+}
+importarScript("/js/requests.js");
+
 var btnMenu = document.querySelector("#btn-menu");
 btnMenu.addEventListener("click", function showMenu() {
   nav.classList.toggle("activo");
@@ -74,3 +81,27 @@ if(document.location.href.indexOf("/favorites/favorites.html")> -1)
     }
 }
 CargarSesion();
+
+/* NUEVAS FUNCIONES PARA EL GET DE FAVORITOS */
+/*
+async function showMovies(){
+    let movies = await fetchData(BASEURL+'/api/movies/', 'GET');
+    const tableMovies = document.querySelector('#list-table-movies tbody');
+    tableMovies.innerHTML='';
+    movies.forEach((movie, index) => {
+    let tr = `<tr>
+    <td>${movie.title}</td>
+    <td>${movie.director}</td>
+    <td>${movie.release_date}</td>
+    <td>
+    <img src="${movie.banner}" width="30%">
+    </td>
+    <td>
+    <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><i class="fa fa-pencil" ></button></i>
+    <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><i class="fa fa-trash" ></button></i>
+    </td>
+    </tr>`;
+    tableMovies.insertAdjacentHTML("beforeend",tr);
+    });
+    }
+    */

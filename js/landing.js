@@ -1,8 +1,9 @@
 
 class Login
 {
-    constructor(Nick,Correo)
+    constructor(ID,Nick,Correo)
     {
+        this.id =ID //Nuevo campo, guarda el ID del usuario para las funciones que lo requieran
         this.nick=Nick;
         this.correo=Correo;
     }
@@ -53,7 +54,7 @@ function show() {
     {
     let dtSesion = localStorage.getItem("SesionUs");
     let indtSesion = JSON.parse(dtSesion);
-    if(indtSesion.nick=="")
+    if(!(indtSesion.id>0))
         {
         location.href = "/landing.html"
         }

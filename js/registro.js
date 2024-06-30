@@ -5,6 +5,7 @@ function importarScript(nombre) {
     document.querySelector("head").appendChild(s);
 }
 importarScript("/js/encoding.js");
+importarScript("/js/requests.js");
 function validaFormulario ()
  {
     let formu = document.getElementById("registroForm");
@@ -56,8 +57,7 @@ function validaFormulario ()
        // formu.submit();
        var PassEnc=SHA1(Pass.value);
        tryReg(Nickname.value, User.value, PassEnc, email.value );
-       alert("Datos guardados, utilice 'iniciar sesion' para testearlos!")
-       location.href="/"
+
     } else{
 
         return false;
@@ -70,8 +70,9 @@ function validaFormulario ()
     
 function tryReg(apodo, usuario, pass, email)
 {
-    const Registrodat= new Registro(apodo, usuario, pass, email);
-savedata(Registrodat);
+   // const Registrodat= new Registro(apodo, usuario, pass, email);
+   //savedata(Registrodat);
+   Registrar(usuario, pass, email, apodo);
 }
 function savedata(reg)
 {
@@ -99,11 +100,11 @@ function loadData(usr,pass)
 function tryIs()
 {
     const formul = document.getElementById("#Loginform");
-    const User = document.querySelector("#lgUser");
+    const Usuario = document.querySelector("#lgUser");
     const Pass = document.querySelector("#lgPass");
     
     let valida = true;
-    if(User.value.length < 3)
+    if(Usuario.value.length < 3)
         {
                alert("Usuario o contraseña incorrectos!");
                valida=false;
@@ -115,23 +116,7 @@ function tryIs()
                valida=false;
                return; 
         }
-        var PassEnc=SHA1(Pass.value);
-    let loginData=loadData(User.value,PassEnc);
-    if(loginData.nick=="" ||loginData.correo=="" )
-        {
-            alert("Usuario o contraseña incorrectos!");
-            valida=false;
-            return; 
-        }
-        if(valida==true)
-            {
-                let usData = new Login(loginData.nick,loginData.correo);
-                GuardarSesion(usData);
-                location.href="/logged/logged.html"
-                //formul.submit();
-            }
-}
-function GuardarSesion(usuario)
-{
-    localStorage.setItem("SesionUs",JSON.stringify(usuario));
+        var PassEnc=SHA1(Pass.value); //Codifica el pass para no ser revelado
+        IniciarSesion(Usuario.value, PassEnc)
+
 }
