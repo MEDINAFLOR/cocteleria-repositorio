@@ -1,9 +1,20 @@
 
-
-
-
+/*function importarScript(nombre) {
+    var s = document.createElement("script");
+    s.src = nombre;
+    document.querySelector("head").appendChild(s);
+}
+importarScript("/js/requests.js");
+*/
+var cocteles = []
+getAllCocteles();
+cocteles = localStorage.getItem("lstCocteles");
+alert(cocteles);
+cocteles = JSON.parse(cocteles)
+/*
     var cocteles = [
         {
+            id:1,
             nombre: "Bombay",
             ingrediente: "brandy",
             tipo: "directo",
@@ -13,6 +24,7 @@
         },
     
         {
+            id:2,
             nombre: "Brandy Alexander",
             ingrediente: "brandy",
             tipo: "coctelera",
@@ -22,6 +34,7 @@
         },
     
         {
+            id:3,
             nombre: "French Connection",
             ingrediente: "brandy",
             tipo: "directo",
@@ -31,6 +44,7 @@
         },
     
         {
+            id:4,
             nombre: "Stinger",
             ingrediente: "brandy",
             tipo: "coctelera",
@@ -40,6 +54,7 @@
         },
     
         {
+            id:5,
             nombre: "Daikiri",
             tipo:"coctelera", 
             ingrediente: "ron",
@@ -49,6 +64,7 @@
         },
     
     ]
+*/
 
 let listForShowFavorites = [];
 

@@ -118,4 +118,13 @@ async function Registrar(Usuario, Passw, Correo, Nick){
             {
                 localStorage.setItem("SesionUs",JSON.stringify(usuario));
             }
-            
+    async function getAllCocteles()
+    {
+        
+        let result = await fetchData(BASEURL+'/apis/cocteles', 'GET');
+        ///apis/ingredientes
+       
+       
+        localStorage.setItem("lstCocteles",JSON.stringify(result));
+        return;
+    }
