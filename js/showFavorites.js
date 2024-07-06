@@ -27,7 +27,7 @@ const cocktailsContainer = document.querySelector('.cocktails-container');
 const cocktailsSection = document.querySelector('.cocktails-section');
 
 const loadFavoritesFromLocalStorage = () => {
-    const storedFavorites = localStorage.getItem('Favorites');
+    const storedFavorites = localStorage.getItem('lstFavoritos');
     favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
     showHTML();
 };
@@ -47,8 +47,8 @@ const showHTML = () =>{
         });
         favorites.forEach(cocktail =>{
             const cocktailBody =`
-                                <div class="cocktail-container" style="background-image: url(${cocktail.img})">
-                                    <h3>${cocktail.name}</h3>        
+                                <div class="cocktail-container" style="background-image: url(${cocktail.imagen})">
+                                    <h3>${cocktail.nombre}</h3>        
                                 </div> 
             `;
             cocktailsContainer.insertAdjacentHTML('beforeend',cocktailBody);

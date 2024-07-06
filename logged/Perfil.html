@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="../fontawesome/fontawesome-free-6.5.2-web/css/all.css">
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/about-cocktails.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>Bartender On Trial</title>
+
+</head>
+
+<body id="body">
+
+    <header class="header">
+
+        <div class="header-content container">
+
+            <div class="logo text-center">
+                <div class="logo-title no-margin">
+                    <h1>Bartender <span> On trial</span> </h1>
+                </div>
+
+                <div class="animacion-container">
+                    <img class="animacion-img-coctelera animacion2-img-coctelera" src="../img/coctelera.png"
+                        alt="coctelera">
+                    <img class="animacion-img-copa" src="../img/copa.png" alt="copa">
+                    <img class="animacion-img-copallena" src="../img/copallena.png" alt="copa-llena">
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn-menu" id="btn-menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+
+            <nav class="nav nav-visible text-center" id="nav">
+                <a class="nav-link" href="./logged.html"><i class="fa-solid fa-martini-glass"></i>Cocteles</a>
+                <a class="nav-link" href="../author/author.html"><i
+                        class="fa-solid fa-user-ninja"></i>Cocteleria de autor</a>
+                <a class="nav-link" href="../favorites/favorites.html"><i class="fa-solid fa-heart"></i>Favoritos</a>
+                <a class="nav-link" href="../user/Perfil.html"><i class="fa-solid fa-user"></i>Perfil</a>
+                <a class="nav-link nav-close" id="loginbtn" onclick="CerrarSesion();"><i
+                        class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar
+                    sesion</a>
+            </nav>
+        </div>
+
+    </header>
+    <section id="list" class="container">
+        <h3 class="subtitle">Datos de Usuario</h3>
+        <table id="list-table-user" class="table">
+        <thead>
+        <tr>
+        <th>Usuario</th>
+        <th>Nick</th>
+        <th>Correo</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        </table>
+        <br>
+        <label for="NuevoCorreo">Editar Correo</label>
+        <input type="email" placeholder="Nuevo Correo" id="NuevoCorreo" name="NuevoCorreo" value="">
+        <button class="btn-cac" onclick="ActualizarPerfil()"><i class="fa fa-pencil" ></i></button>
+        <br>
+        </section>
+      
+        <footer class="welcome-footer text-center">
+            <div class="container">
+                <div class="welcome-social-media">
+                    <a href="mailto:bartenderontrial@protonmail.com"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/bartenderontrial/"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/bartenderontrial.ok/"> <i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.link/7rzq05"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <p>Todos los derechos reservados
+                    <script>document.write(new Date().getFullYear());</script>. <span>BartenderOnTrial SRL ©</span>
+                </p>
+            </div>
+       
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="../js/requests.js"></script>
+            <script src="../js/Perfil.js"></script>
+        </footer>
+</body>

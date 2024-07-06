@@ -1,15 +1,8 @@
 
-/*function importarScript(nombre) {
-    var s = document.createElement("script");
-    s.src = nombre;
-    document.querySelector("head").appendChild(s);
-}
-importarScript("/js/requests.js");
-*/
+
 var cocteles = []
 getAllCocteles();
 cocteles = localStorage.getItem("lstCocteles");
-alert(cocteles);
 cocteles = JSON.parse(cocteles)
 /*
     var cocteles = [
@@ -199,10 +192,12 @@ function embedElements(coctelName, coctelIngredients, coctelPreparation, coctelI
     listIngredientes(coctelIngredients);
     recipeContainerMajor.style.display = "block";
 
-    loadFavoritesFromStorage();
-   
-    const index = listForShowFavorites.findIndex(
-        element =>  element.name === coctelName
+    //loadFavoritesFromStorage();
+    const favorit = localStorage.getItem("lstFavoritos");
+    favoritos = JSON.parse(favorit);
+
+    const index = favoritos.findIndex(
+        element =>  element.nombre === coctelName
     );
 
     if (index != -1){

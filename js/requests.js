@@ -85,7 +85,7 @@ async function Registrar(Usuario, Passw, Correo, Nick){
         });
         return;
         }
-        // Crea un objeto con los datos de la película
+
         const Registro = {
         usuario: Usuario,
         passw: Passw,
@@ -108,16 +108,16 @@ async function Registrar(Usuario, Passw, Correo, Nick){
             
             if(result.resultado==0)
                 {
-                let usData = new Login(result.id, result.nick, result.correo);
+                let usData = new Login(result.id, result.nick, result.correo, result.usuario);
                 GuardarSesion(usData);
                 location.href="/logged/logged.html"
                 }
         }
   
-            function GuardarSesion(usuario)
-            {
-                localStorage.setItem("SesionUs",JSON.stringify(usuario));
-            }
+    function GuardarSesion(usuario)
+    {
+        localStorage.setItem("SesionUs",JSON.stringify(usuario));
+    }
     async function getAllCocteles()
     {
         
@@ -128,3 +128,82 @@ async function Registrar(Usuario, Passw, Correo, Nick){
         localStorage.setItem("lstCocteles",JSON.stringify(result));
         return;
     }
+    async function ObtenerFavoritos(Usuario){
+
+        const RUsuario = {
+            IdUsuario: Usuario
+        };
+
+        let result = [];
+
+        result = await fetchData(`${BASEURL}/apis/favoritos`, 'POST', RUsuario);
+
+        try
+        {
+        localStorage.setItem("lstFavoritos",JSON.stringify(result));
+        }catch       
+        {
+            const vacio = [{}]
+            localStorage.setItem("lstFavoritos",JSON.stringify(vacio));
+        }
+        
+}
+    async function AgregarFavorito(Usuario, Coctel){
+    
+
+        const Favorito = {
+            IdUsuario: Usuario,
+            IdCoctel: Coctel,
+        };
+        let result = null;
+        // Realiza una petición POST para crear un usuario
+        result = await fetchData(`${BASEURL}/apis/favoritos/add`, 'POST', Favorito);
+      
+        
+            if(result.resultado==0)
+                {
+               // alert("Favorito agregado");
+                
+                ObtenerFavoritos(Usuario);
+            }
+    }
+    async function BorrarFavorito(Usuario, Coctel){
+    
+            const Favorito = {
+                IdUsuario: Usuario,
+                IdCoctel: Coctel,
+            };
+            let result = null;
+            // Realiza una petición POST para crear un usuario
+            result = await fetchData(`${BASEURL}/apis/favoritos`, 'DELETE', Favorito);
+          
+            
+                if(result.resultado==0)
+                    {
+                 //   alert("Favorito Eliminado");
+                    ObtenerFavoritos(Usuario);
+                    }
+        }
+
+        
+        async function UpdatePerfil(IUsuario, dUsuario, dCorreo){
+            if (!IUsuario || !dCorreo ) {
+                Swal.fire({
+                title: 'Error!',
+                text: 'Por favor completa el correo',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
+                });
+                return;
+                }
+            const Perfil = {
+                IdUsuario: IUsuario,
+                Usuario: dUsuario,
+                Correo: dCorreo
+            };
+            let result = null;
+            // Realiza una petición POST para crear un usuario
+            result = await fetchData(`${BASEURL}/apis/Usuario/upd`, 'POST', Perfil);
+            alert(result.mensaje);
+            
+        }

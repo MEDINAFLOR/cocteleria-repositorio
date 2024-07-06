@@ -1,11 +1,12 @@
 
 class Login
 {
-    constructor(ID,Nick,Correo)
+    constructor(ID,Nick,Correo, Usuario)
     {
-        this.id =ID //Nuevo campo, guarda el ID del usuario para las funciones que lo requieran
-        this.nick=Nick;
-        this.correo=Correo;
+        this.id =ID, //Nuevo campo, guarda el ID del usuario para las funciones que lo requieran
+        this.nick=Nick,
+        this.correo=Correo,
+        this.usuario=Usuario
     }
 
 }
