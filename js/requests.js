@@ -205,5 +205,13 @@ async function Registrar(Usuario, Passw, Correo, Nick){
             // Realiza una petición POST para crear un usuario
             result = await fetchData(`${BASEURL}/apis/Usuario/upd`, 'POST', Perfil);
             alert(result.mensaje);
+            if(result.resultado==0)
+            {
+                let Perfil =   localStorage.getItem("SesionUs");
+                    Perfil = JSON.parse(Perfil);
+                    Perfil.correo = dCorreo;
+                    GuardarSesion(Perfil);
+                    
+            }
             
         }

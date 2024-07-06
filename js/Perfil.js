@@ -1,3 +1,14 @@
+class Login
+{
+    constructor(ID,Nick,Correo, Usuario)
+    {
+        this.id =ID, //Nuevo campo, guarda el ID del usuario para las funciones que lo requieran
+        this.nick=Nick,
+        this.correo=Correo,
+        this.usuario=Usuario
+    }
+
+}
 async function MostrarPerfil(){
     let Perfil =   localStorage.getItem("SesionUs");
     Perfil = JSON.parse(Perfil);
@@ -16,16 +27,18 @@ async function MostrarPerfil(){
     <td>${Perfil.correo}&nbsp;&nbsp;</td>
     </tr>`;
     tableUser.insertAdjacentHTML("beforeend",tr);
+    const nCorreo = document.getElementById("NuevoCorreo");
+    nCorreo.value="";
     }
     MostrarPerfil();
     function CerrarSesion()
-{
-  let DestroyUs = new Login("","");
-  localStorage.setItem("SesionUs",JSON.stringify(DestroyUs));
-  alert("Sesion Cerrada");
-  location.href = "/"
-}
-    function ActualizarPerfil()
+    {
+    let DestroyUs = new Login("","");
+    localStorage.setItem("SesionUs",JSON.stringify(DestroyUs));
+    alert("Sesion Cerrada");
+    location.href = "/"
+    }
+    async function ActualizarPerfil()
     {
         let Perfil =   localStorage.getItem("SesionUs");
         Perfil = JSON.parse(Perfil);
@@ -33,5 +46,5 @@ async function MostrarPerfil(){
         const nus = Perfil.usuario;
         const nCorreo = document.getElementById("NuevoCorreo");
         UpdatePerfil(id, nus, nCorreo.value);
-        
+        setTimeout(MostrarPerfil,1000);
     }
