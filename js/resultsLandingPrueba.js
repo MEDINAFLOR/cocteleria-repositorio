@@ -223,7 +223,7 @@ function processIngredient(e) {
  e.preventDefault();
  var selectedOptionType = typesOfPreparation.value;
  var selectedOptionIng = mainIngredient.value;
-
+ 
  searchForIngredient(selectedOptionIng, selectedOptionType);
 
 }
